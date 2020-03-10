@@ -5,7 +5,11 @@
 @section scripts{
     <script>
         var urlPost = '@Url.Action("Incluir", "Cliente", new { area = "" })';
+        var urlListBenef= '@Url.Action("BeneficiariosList", "Cliente", new { area = "" })';
     </script>
+    @Scripts.Render("~/bundles/maskedinput")
+    @Scripts.Render("~/bundles/jquery.validate")
+    @Scripts.Render("~/bundles/beneficiarios")
     @Scripts.Render("~/bundles/clientes")
 }
 <h2>@Html.Raw(ViewBag.Title)</h2>

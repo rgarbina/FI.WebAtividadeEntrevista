@@ -1,0 +1,72 @@
+﻿<style>
+    #btnIncluirBenificio {
+        margin-top: 25px;
+    }
+
+    .btnAlterarBenificio {
+        margin-right: 10px;
+    }
+
+    thead, tbody {
+        display: block;
+    }
+
+    tbody {
+        overflow-y: scroll;
+        max-height: 250px;
+    }
+
+    .table th,
+    .table td {
+        padding: 5px;
+        width: 10%;
+    }
+</style>
+<div id="modalAbatimento" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Beneficiários</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="formBeneficiario">
+                    <input type="hidden" id="IdBeneficiarioTabela" value="" />
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="CpfBeneficiario">CPF:</label>
+                            <input required="required" type="text" class="form-control cpf" id="CpfBeneficiario" name="Cpf" placeholder="Ex.: 999.999.999-99" maxlength="15">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="NomeBeneficiario">Nome:</label>
+                            <input required="required" type="text" class="form-control" id="NomeBeneficiario" name="NomeBeneficiario" placeholder="Ex.: João" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input type="button" id="btnIncluirBenificio" class="btn btn-sm btn-success" value="Incluir">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <table id="gridBeneficiários" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>CPF</th>
+                                <th>Nome</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div> <!-- /.modal -->

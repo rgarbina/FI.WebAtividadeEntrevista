@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace WebAtividadeEntrevista.Models
 {
@@ -67,5 +68,12 @@ namespace WebAtividadeEntrevista.Models
         /// </summary>
         public string Telefone { get; set; }
 
+        /// <summary>
+        /// CPF
+        /// </summary>
+        [DisplayFormat(DataFormatString = "{0:###.###.###-##}")]
+        public string CPF { get; set; }
+
+        public List<BenificiarioModel> Benficiarios { get; set; }
     }    
 }
